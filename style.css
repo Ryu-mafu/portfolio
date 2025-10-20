@@ -98,6 +98,29 @@ h2 {
     object-fit: cover; /* 画像の比率を保ちつつコンテナに収める */
 }
 
+/* 動画コンテナのスタイル */
+.video-container {
+    max-width: 500px; /* 動画の最大幅を制限 (調整可能) */
+    margin: 30px auto; /* 上下の余白と中央寄せ */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* スタイリッシュな影を追加 */
+    border-radius: 8px;
+    overflow: hidden; /* 角丸に対応させる */
+}
+
+.video-container video {
+    width: 100%; /* コンテナの幅に合わせて100%表示 */
+    height: auto;
+    display: block;
+}
+
+/* メディアクエリ（モバイル対応）: 小さな画面でも見やすく */
+@media (max-width: 768px) {
+    .video-container {
+        margin: 20px 0; /* モバイルでは横幅いっぱいまで使い、左右の余白を減らす */
+        max-width: 100%;
+    }
+}
+
 /* モーダル（画像拡大表示） */
 .modal {
     display: none; /* 初期状態では非表示 */
